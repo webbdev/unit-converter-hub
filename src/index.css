@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(251, 245, 237, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  /* display: flex;
+  place-items: center; */
+  /* min-width: 320px;
+  min-height: 100vh; */
+}
+
+a {
+  transition: 0.3s ease;
+}
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+} */
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+} */
+
+::-webkit-scrollbar {
+    height: 6px;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-thumb {
+	background: #ddccc2;
+	border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+	background: #fbf5ed;
+	border-radius: 3px;
+}

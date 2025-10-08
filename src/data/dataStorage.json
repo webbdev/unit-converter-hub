@@ -1,0 +1,34 @@
+{
+  "title": "Data Storage Converter",
+  "subtitle": "Convert between bits, bytes, kilobytes, megabytes, and\u00a0more.",
+  "referenceValuesTitle": "Reference Values",
+  "referenceValues": [
+    "1 byte = 8 bits",
+    "1 KB = 1024 bytes",
+    "1 MB = 1024 KB",
+    "1 GB = 1024 MB"
+  ],
+  "examplesTitle": "Example Conversions",
+  "examples": [
+    {
+      "title": "Megabytes to Gigabytes",
+      "formula": "GB = MB ÷ 1024",
+      "calculation": "2048 MB = 2048 ÷ 1024 = 2 GB"
+    },
+    {
+      "title": "Bytes to Kilobytes",
+      "formula": "KB = Bytes ÷ 1024",
+      "calculation": "4096 B = 4096 ÷ 1024 = 4 KB"
+    }
+  ],
+  "usageTitle": "Where It's Used",
+  "usage": [
+    { "title": "Computers:", "description": "Measuring file and memory sizes." },
+    { "title": "Networking:", "description": "Bits and bytes measure bandwidth and data transfer." }
+  ],
+  "funFactsTitle": "Fun Facts About Data Storage",
+  "funFacts": [
+    { "title": "Kilobyte Confusion:", "description": "Technically 1 KB = 1024 bytes, not 1000." },
+    { "title": "Moore’s Law:", "description": "Storage density has roughly doubled every 18–24 months." }
+  ]
+}

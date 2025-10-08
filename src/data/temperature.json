@@ -1,0 +1,32 @@
+{
+  "title": "Temperature Converter",
+  "subtitle": "Easily convert between Celsius, Fahrenheit, and\u00a0Kelvin.",
+  "referenceValuesTitle": "Reference Points",
+  "referenceValues": [
+    "Water freezes at 0°C (32°F, 273.15K)",
+    "Water boils at 100°C (212°F, 373.15K)"
+  ],
+  "examplesTitle": "Example Conversions",
+  "examples": [
+    {
+      "title": "Celsius to Fahrenheit",
+      "formula": "F = (C × 9/5) + 32",
+      "calculation": "25°C = (25 × 9/5) + 32 = 77°F"
+    },
+    {
+      "title": "Fahrenheit to Celsius",
+      "formula": "C = (F - 32) × 5/9",
+      "calculation": "68°F = (68 - 32) × 5/9 = 20°C"
+    }
+  ],
+  "usageTitle": "Where It's Used",
+  "usage": [
+    { "title": "Science:", "description": "Kelvin is used in physics for absolute temperatures." },
+    { "title": "Weather:", "description": "Fahrenheit is popular in the U.S., while Celsius dominates globally." }
+  ],
+  "funFactsTitle": "Fun Facts About Temperature",
+  "funFacts": [
+    { "title": "Absolute Zero:", "description": "The coldest possible temperature is -273.15°C (0K)." },
+    { "title": "Fahrenheit Origins:", "description": "Named after Daniel Gabriel Fahrenheit in 1724." }
+  ]
+}

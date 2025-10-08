@@ -1,0 +1,50 @@
+{
+	"title": "PX ⇄ REM ⇄ EM Converter",
+	"subtitle": "Convert between pixel, rem, and em units — perfect for responsive and accessible web\u00a0design.",
+	"referenceValuesTitle": "Reference Values (assuming base font size = 16px)",
+	"referenceValues": [
+		"1 rem = 16 px",
+		"1 em = 16 px (depends on parent element font size)",
+		"0.5 rem = 8 px",
+		"2 rem = 32 px"
+	],
+	"examplesTitle": "Example Conversions",
+	"examples": [
+		{
+			"title": "Pixels to Rem",
+			"formula": "rem = px ÷ 16",
+			"calculation": "24 px = 24 ÷ 16 = 1.5 rem"
+		},
+		{
+			"title": "Rem to Pixels",
+			"formula": "px = rem × 16",
+			"calculation": "1.25 rem = 1.25 × 16 = 20 px"
+		}
+	],
+	"usageTitle": "Where It's Used",
+	"usage": [
+		{
+			"title": "Responsive Design:",
+			"description": "REM and EM units scale with the user's browser settings, improving accessibility."
+		},
+		{
+			"title": "Typography:",
+			"description": "Designers use EM for spacing and font sizes that adapt to the context element."
+		},
+		{
+			"title": "CSS Layouts:",
+			"description": "PX is often used for precision, while REM ensures proportional scaling."
+		}
+	],
+	"funFactsTitle": "Fun Facts About PX, REM & EM",
+	"funFacts": [
+		{
+			"title": "Accessibility:",
+			"description": "Using REM makes text easier to scale when users change browser zoom or default font size."
+		},
+		{
+			"title": "Nested Scaling:",
+			"description": "EM values multiply based on their parent’s font size, making them powerful but tricky!"
+		}
+	]
+}

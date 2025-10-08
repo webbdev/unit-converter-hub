@@ -1,0 +1,34 @@
+{
+	"title": "Weight Converter",
+	"subtitle": "Convert between grams, kilograms, pounds, ounces, and\u00a0more\u00a0easily.",
+	"referenceValuesTitle": "Common Reference Values",
+	"referenceValues": [
+		"1 kilogram = 1000 grams",
+		"1 pound = 16 ounces",
+		"1 ton = 1000 kilograms",
+		"1 ounce = 28.35 grams"
+	],
+	"examplesTitle": "Example Conversions",
+	"examples": [
+		{
+			"title": "Kilograms to Pounds",
+			"formula": "lb = kg × 2.20462",
+			"calculation": "5 kg = 5 × 2.20462 = 11.023 lb"
+		},
+		{
+			"title": "Pounds to Kilograms",
+			"formula": "kg = lb ÷ 2.20462",
+			"calculation": "10 lb = 10 ÷ 2.20462 = 4.54 kg"
+		}
+	],
+	"usageTitle": "Where It's Used",
+	"usage": [
+		{ "title": "Science:", "description": "Used in labs for precise mass measurement." },
+		{ "title": "Everyday Life:", "description": "Cooking, dieting, and exercise equipment." }
+	],
+	"funFactsTitle": "Fun Facts About Weight",
+	"funFacts": [
+		{ "title": "Moon Weight:", "description": "You weigh about one-sixth as much on the Moon!" },
+		{ "title": "Metric Simplicity:", "description": "The kilogram was redefined in 2019 using physical constants." }
+	]
+}

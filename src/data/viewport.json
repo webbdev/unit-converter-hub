@@ -1,0 +1,53 @@
+{
+  "title": "Viewport Unit Converter (px ⇄ vw ⇄ vh)",
+  "subtitle": "Easily convert between pixels (px), viewport width (vw), and viewport height (vh). You can also enter your own screen width and height — or auto-detect your current browser\u00a0viewport.",
+  "examplesTitle": "Conversion Examples",
+  "examplesDescription": "Here are some examples of viewport conversions based on a 1920×1080 screen:",
+  "examples": [
+    {
+      "title": "Convert 192px to vw",
+      "formula": "vw = (px / viewportWidth) × 100",
+      "calculation": "192px = (192 / 1920) × 100 = 10vw"
+    },
+    {
+      "title": "Convert 108px to vh",
+      "formula": "vh = (px / viewportHeight) × 100",
+      "calculation": "108px = (108 / 1080) × 100 = 10vh"
+    },
+    {
+      "title": "Convert 50vw to px",
+      "formula": "px = (vw × viewportWidth) / 100",
+      "calculation": "50vw = (50 × 1920) / 100 = 960px"
+    }
+  ],
+  "usageTitle": "When to Use Viewport Units",
+  "usage": [
+    {
+      "title": "Responsive typography:",
+      "description": "Use vw-based font sizes for fluid text scaling with viewport width."
+    },
+    {
+      "title": "Full-screen elements:",
+      "description": "Use 100vh for hero sections or full-page layouts."
+    },
+    {
+      "title": "Dynamic spacing:",
+      "description": "vw/vh can help scale paddings and margins on different screen sizes."
+    }
+  ],
+  "funFactsTitle": "Fun Facts About Viewport Units",
+  "funFacts": [
+    {
+      "title": "CSS Introduction",
+      "description": "Viewport units were introduced in CSS3 to make layouts more flexible and responsive."
+    },
+    {
+      "title": "vmin & vmax",
+      "description": "In addition to vw and vh, CSS also supports vmin and vmax based on the smaller/larger viewport dimension."
+    },
+    {
+      "title": "Real-time scaling",
+      "description": "Viewport units automatically adjust when users resize the browser window."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Tailwind CSS Unit Reference & Converter",
+  "subtitle": "Explore Tailwind’s consistent unit scale for spacing, typography, and responsive breakpoints. Instantly see their equivalent pixel\u00a0values.",
+  "referenceValuesTitle": "Understanding Tailwind Units",
+  "referenceValuesDescription": "Tailwind’s design system is based on a 4px spacing scale, rem-based font sizes, and mobile-first breakpoints.",
+  "referenceValues": [
+    {
+      "title": "Spacing scale",
+      "description": "Built on a 4px base grid. Each unit (like p-4 or m-6) increases in 4px steps."
+    },
+    {
+      "title": "Font scale",
+      "description": "Uses typographic proportions — each step roughly 1.125× larger than the previous."
+    },
+    {
+      "title": "Breakpoints",
+      "description": "Follow a mobile-first approach — meaning styles apply upward from the breakpoint."
+    }
+  ],
+  "funFactsTitle": "Fun Tailwind Facts",
+  "funFacts": [
+    {
+      "title": "Design Consistency",
+      "description": "The rem and px mappings make spacing and typography predictable across devices."
+    },
+    {
+      "title": "Customization Power",
+      "description": "You can redefine the entire spacing or font scale in `tailwind.config.js` for brand-specific systems."
+    },
+    {
+      "title": "Responsive Freedom",
+      "description": "Tailwind breakpoints are designed for common screen widths but can be fully customized."
+    }
+  ]
+}

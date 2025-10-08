@@ -1,0 +1,23 @@
+{
+  "title": "Color Converter <br> (HEX ⇄ RGB ⇄ HSL)",
+  "subtitle": "Easily convert between HEX, RGB, and HSL color formats with live preview and examples.",
+  "examplesTitle": "Conversion Examples",
+  "examples": [
+    { "title": "HEX → RGB", "example": "#efadbd → rgb(239, 173, 189)" },
+    { "title": "RGB → HEX", "example": "rgb(255, 0, 0) → #ff0000" },
+    { "title": "RGB → HSL", "example": "rgb(255, 0, 0) → hsl(0, 100%, 50%)" },
+    { "title": "HSL → HEX", "example": "hsl(240, 100%, 50%) → #0000ff" }
+  ],
+  "usageTitle": "When to Use Different Color Formats",
+  "usage": [
+    { "title": "HEX:", "description": "Most common format for web colors, compact and easy to read." },
+    { "title": "RGB:", "description": "Great for dynamic color manipulation in JavaScript or CSS animations." },
+    { "title": "HSL:", "description": "Ideal for adjusting hue, saturation, or lightness while maintaining color relationships." }
+  ],
+  "funFactsTitle": "Fun Facts About Colors",
+  "funFacts": [
+    { "title": "Color Wheel Origin", "description": "The first color wheel was invented by Isaac Newton in 1666." },
+    { "title": "Web-safe Colors", "description": "In the early web days, only 216 colors were considered 'safe' across browsers." },
+    { "title": "HEX Logic", "description": "A HEX color code is a shorthand for RGB values written in hexadecimal notation." }
+  ]
+}

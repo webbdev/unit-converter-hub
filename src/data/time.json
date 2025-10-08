@@ -1,0 +1,33 @@
+{
+  "title": "Time Converter",
+  "subtitle": "Convert between milliseconds, seconds, minutes, hours, and\u00a0days.",
+  "referenceValuesTitle": "Reference Values",
+  "referenceValues": [
+    "1 minute = 60 seconds",
+    "1 hour = 60 minutes = 3600 seconds",
+    "1 day = 24 hours = 86,400 seconds"
+  ],
+  "examplesTitle": "Example Conversions",
+  "examples": [
+    {
+      "title": "Hours to Seconds",
+      "formula": "s = hr × 3600",
+      "calculation": "2 hr = 2 × 3600 = 7200 s"
+    },
+    {
+      "title": "Minutes to Hours",
+      "formula": "hr = min ÷ 60",
+      "calculation": "180 min = 180 ÷ 60 = 3 hr"
+    }
+  ],
+  "usageTitle": "Where It's Used",
+  "usage": [
+    { "title": "Everyday life:", "description": "Tracking time in clocks, timers, and schedules." },
+    { "title": "Science:", "description": "Milliseconds and seconds are used in experiments and physics." }
+  ],
+  "funFactsTitle": "Fun Facts About Time",
+  "funFacts": [
+    { "title": "Leap Seconds:", "description": "Occasionally added to keep clocks in sync with Earth's rotation." },
+    { "title": "Fastest Second:", "description": "Atomic clocks measure time to an accuracy of one second in 300 million years!" }
+  ]
+}

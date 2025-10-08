@@ -1,0 +1,33 @@
+{
+  "title": "Speed Converter",
+  "subtitle": "Convert between meters per second, kilometers per hour, miles per hour, and\u00a0knots.",
+  "referenceValuesTitle": "Reference Values",
+  "referenceValues": [
+    "1 m/s = 3.6 km/h",
+    "1 mph = 1.609 km/h",
+    "1 knot = 1.852 km/h"
+  ],
+  "examplesTitle": "Example Conversions",
+  "examples": [
+    {
+      "title": "Kilometers per Hour to Miles per Hour",
+      "formula": "mph = km/h ÷ 1.609",
+      "calculation": "100 km/h = 100 ÷ 1.609 = 62.14 mph"
+    },
+    {
+      "title": "Meters per Second to Kilometers per Hour",
+      "formula": "km/h = m/s × 3.6",
+      "calculation": "20 m/s = 20 × 3.6 = 72 km/h"
+    }
+  ],
+  "usageTitle": "Where It's Used",
+  "usage": [
+    { "title": "Automotive:", "description": "Vehicles use km/h or mph to indicate speed." },
+    { "title": "Aviation and Marine:", "description": "Knots are used to measure air and sea speeds." }
+  ],
+  "funFactsTitle": "Fun Facts About Speed",
+  "funFacts": [
+    { "title": "Speed of Light:", "description": "Light travels at about 299,792 km/s!" },
+    { "title": "Fastest Car:", "description": "The Bugatti Chiron Super Sport 300+ reached 490 km/h." }
+  ]
+}
