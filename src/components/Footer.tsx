@@ -33,10 +33,10 @@ const Footer: React.FC = () => {
 	};
 
 	return (
-		<footer className="relative mb-0 sm:mb-7.5 bg-black sm:bg-transparent rounded-2xl sm:rounded-0">
+		<footer className="relative mb-5.5 sm:mb-7.5">
 			<Container>
-				<div className="relative text-center rounded-2xl bg-black text-[#fbf5ed] sm:px-10">
-					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 sm:pt-14 pb-8 sm:pb-10">
+				<div className="relative text-center rounded-2xl bg-black text-[#fbf5ed] px-5.5 sm:px-10">
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-9 sm:pt-14 pb-9 sm:pb-10">
 						
 						{/* Brand */}
 						<div className="text-left">
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
 					{showButton && (
 						<button
 							onClick={scrollToTop}
-							className="absolute right-[-8px] sm:right-3 md:right-5 xl:right-[-100px] bottom-3.5 sm:bottom-3 bg-[#efadbd] text-black px-3 sm:px-4 xl:px-5 py-2 xl:py-3 rounded-full shadow-lg hover:bg-[#f5c4d1] transition"
+							className="absolute right-[20px] sm:right-3 md:right-5 xl:right-[-100px] bottom-24 sm:bottom-3 bg-[#efadbd] text-black px-3 sm:px-4 xl:px-5 py-2 xl:py-3 rounded-full shadow-lg hover:bg-[#f5c4d1] transition"
 							aria-label="Back to top"
 						>
 							↑ Top

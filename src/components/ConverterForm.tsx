@@ -66,7 +66,7 @@ const ConverterForm = ({ units, defaultFrom, defaultTo, onConvert }: ConverterFo
 			</div>
 
 			{/* Result */}
-			<div className="text-center mt-2 sm:mt-4">
+			<div className="text-center mt-1.5 sm:mt-4">
 				<span className="block bg-[#fbf5ed] rounded-lg text-lg sm:text-xl font-bold overflow-x-auto py-3">
 					Result:{" "}
 					{value ? formatResult(convert(Number(value))) : "-"} {toUnit}
