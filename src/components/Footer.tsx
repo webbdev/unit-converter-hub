@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
 		<footer className="relative mb-0 sm:mb-7.5 bg-black sm:bg-transparent rounded-2xl sm:rounded-0">
 			<Container>
 				<div className="relative text-center rounded-2xl bg-black text-[#fbf5ed] sm:px-10">
-					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 sm:pt-14 pb-10">
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 sm:pt-14 pb-8 sm:pb-10">
 						
 						{/* Brand */}
 						<div className="text-left">

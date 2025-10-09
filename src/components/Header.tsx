@@ -111,7 +111,7 @@ const Header: React.FC = () => {
 					<a
 						href="/"
 						onClick={handleHomeClick}
-						className="text-xl sm:text-2xl underline underline-offset-4 decoration-[#efadbd]"
+						className="text-2xl sm:text-2xl underline underline-offset-4 decoration-[#efadbd]"
 					>
 						Convertly
 					</a>
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
 							{sections.map(({ id, label }) => (
 								<li 
 									key={id}
-									className="py-5 sm:p-0 border-b border-b-0.5 sm:border-0 w-[60%] sm:w-auto text-center"
+									className="py-6 sm:p-0 border-b border-b-0.5 sm:border-0 w-[60%] sm:w-auto text-center"
 								>
 									<a
 										href={`#${id}`}
@@ -165,7 +165,7 @@ const Header: React.FC = () => {
 						onClick={toggleMenu}
 						aria-expanded={isOpen}
 						aria-label="Toggle Menu"
-						className="sm:hidden p-2 z-50"
+						className="sm:hidden py-2 z-50"
 					>
 						<svg
 							className="w-7 h-7"

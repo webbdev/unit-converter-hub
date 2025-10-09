@@ -24,10 +24,10 @@ const convertLength = (value: number, from: string, to: string) => {
 const LengthConverter = () => {
 	return (
 		<>
-			<div className="rounded-2xl bg-[#ddccc2] border border-black mt-2 mb-6 sm:my-7.5 p-6 sm:p-10 md:px-20 md:py-16">
+			<div className="rounded-2xl bg-[#ddccc2] border border-black mt-2 mb-6 sm:my-7.5 p-5 sm:p-10 md:px-20 md:py-16">
 				<div className="">
 					<div className="max-w-[620px] mx-auto text-center bg-[#fbf5ed] border rounded-2xl px-6 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
-						<h1 className="text-2xl sm:text-3xl font-semibold text-center mb-6">
+						<h1 className="text-2xl sm:text-3xl font-semibold text-center mb-5.5">
 							{lengthData.title}
 						</h1>
 						<p className="text-center mx-auto mb-8 max-w-[480px]">
@@ -45,14 +45,14 @@ const LengthConverter = () => {
 					{/* Reference Values */}
 					<section className="">
 						<div className="mb-10">
-							<h2 className="text-xl font-semibold mb-6">{lengthData.referenceValuesTitle}</h2>
-							<p className="mb-2.5">{lengthData.referenceValuesDescription}</p>
+							<h2 className="text-xl font-semibold mb-5.5">{lengthData.referenceValuesTitle}</h2>
+							<p className="mb-4">{lengthData.referenceValuesDescription}</p>
 							<pre className="bg-[#fbf5ed] mb-10 p-4 rounded-lg overflow-x-auto">
 								{lengthData.referenceValues.join("\n")}
 							</pre>
 
 							{/* Examples */}
-							<h3 className="text-lg font-semibold mb-6">{lengthData.examplesTitle}</h3>
+							<h3 className="text-lg font-semibold mb-5.5">{lengthData.examplesTitle}</h3>
 							<p className="mb-4">{lengthData.examplesDescription}</p>
 							<ul className="">
 								{lengthData.examples.map((ex, i) => (
@@ -69,10 +69,10 @@ const LengthConverter = () => {
 
 						{/* Usage */}
 						<div className="mb-10">
-							<h2 className="text-xl font-semibold mb-6">{lengthData.usageTitle}</h2>
+							<h2 className="text-xl font-semibold mb-5.5">{lengthData.usageTitle}</h2>
 							<ul>
 								{lengthData.usage.map((u, i) => (
-									<li key={i} className="mb-1.5">
+									<li key={i} className="mb-4">
 										<b>{u.title}</b> {u.description}
 									</li>
 								))}
@@ -81,12 +81,12 @@ const LengthConverter = () => {
 
 						{/* Fun Facts */}
 						<div className="">
-							<h2 className="text-xl font-semibold mb-6">
+							<h2 className="text-xl font-semibold mb-5.5">
 								{lengthData.funFactsTitle}
 							</h2>
 							<ul>
 								{lengthData.funFacts.map((fact, i) => (
-									<li key={i} className="mb-1.5">
+									<li key={i} className="mb-4">
 										<b>{fact.title}:</b> {fact.description}
 									</li>
 								))}
