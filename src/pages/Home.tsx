@@ -12,8 +12,8 @@ const generalTools = [
 ];
 
 const developerTools = [
-	{ id: "dt-1", name: "PX ↔ REM + PX\u00a0↔\u00a0EM", path: "/px-rem-em", icon: "🖥️" },
-	{ id: "dt-2", name: "Tailwind ↔ Px Converter", path: "/tailwind-px", icon: "🌀" },
+	{ id: "dt-1", name: "PX – REM + PX\u00a0–\u00a0EM", path: "/px-rem-em", icon: "🖥️" },
+	{ id: "dt-2", name: "Tailwind\u00a0–\u00a0Px Converter", path: "/tailwind-px", icon: "🌀" },
 	{ id: "dt-3", name: "Color Converter", path: "/color", icon: "🎨" },
 	// { id: "dt-4", name: "Viewport Converter", path: "/viewport", icon: "📐" },
 ];
