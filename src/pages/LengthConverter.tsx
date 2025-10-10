@@ -26,7 +26,7 @@ const LengthConverter = () => {
 		<>
 			<div className="rounded-2xl bg-[#ddccc2] sm:border border-black mt-2 mb-6 sm:my-7.5 p-5.5 sm:p-10 md:px-20 md:py-16">
 				<div className="">
-					<div className="max-w-[620px] mx-auto text-center bg-[#fbf5ed] sm:border rounded-2xl px-6 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
+					<div className="max-w-[620px] mx-auto text-center bg-[#fbf5ed] sm:border rounded-2xl px-5.5 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
 						<h1 className="text-2xl sm:text-3xl font-semibold text-center mb-6">
 							{lengthData.title}
 						</h1>
@@ -43,7 +43,7 @@ const LengthConverter = () => {
 					</div>
 
 					{/* Reference Values */}
-					<section className="">
+					<section>
 						<div className="mb-10">
 							<h2 className="text-xl font-semibold mb-5.5">{lengthData.referenceValuesTitle}</h2>
 							<p className="mb-4">{lengthData.referenceValuesDescription}</p>
@@ -54,7 +54,7 @@ const LengthConverter = () => {
 							{/* Examples */}
 							<h3 className="text-lg font-semibold mb-5.5">{lengthData.examplesTitle}</h3>
 							<p className="mb-4">{lengthData.examplesDescription}</p>
-							<ul className="">
+							<ul>
 								{lengthData.examples.map((ex, i) => (
 									<li key={i} className="bg-[#fbf5ed] rounded-lg px-3 py-2 mb-6">
 										<p className="mb-2"><b>{ex.title}:</b></p>

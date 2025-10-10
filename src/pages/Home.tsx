@@ -59,12 +59,12 @@ const Home = () => {
 				<h2 className="text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-10">
 					General Units
 				</h2>
-				<div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 lg:gap-8">
+				<div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
 					{generalTools.map((tool) => (
 						<Link
 							key={tool.id}
 							to={tool.path}
-							className="group px-2 sm:px-6 py-5 sm:py-8 rounded-2xl border bg-[#ddccc2] hover:bg-transparent shadow hover:shadow transition"
+							className="group px-1 py-5 sm:py-8 rounded-2xl border bg-[#ddccc2] hover:bg-transparent shadow hover:shadow transition"
 						>
 							<div className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">
 								{tool.icon}
@@ -88,7 +88,7 @@ const Home = () => {
 
 				<motion.div
 					layout
-					className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 lg:gap-8"
+					className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8"
 				>
 					<AnimatePresence>
 						{visibleTools.map((tool, i) => (
@@ -102,7 +102,7 @@ const Home = () => {
 							>
 								<Link
 									to={tool.path}
-									className="group block px-2 sm:px-6 py-5 sm:py-8 rounded-2xl border bg-[#ddccc2] hover:bg-transparent shadow hover:shadow transition"
+									className="group block px-1 py-5 sm:py-8 rounded-2xl border bg-[#ddccc2] hover:bg-transparent shadow hover:shadow transition"
 								>
 									<div className="text-3xl sm:text-4xl mb-3 sm:mb-4">
 										{tool.icon}

@@ -118,7 +118,7 @@ const Header: React.FC = () => {
 
 					<nav aria-label="Main Navigation">
 						<ul
-							className={`fixed inset-0 h-screen bg-black text-[#fbf5ed] 
+							className={`fixed inset-0 h-screen bg-[#32312f] text-[#fbf5ed] 
 								flex flex-col items-center sm:justify-center pt-22 sm:pt-0 
 								transform transition-transform duration-400 ease-in
 								sm:static sm:h-auto sm:flex sm:flex-row sm:space-x-8 
@@ -136,18 +136,10 @@ const Header: React.FC = () => {
 										className={`group relative transition-colors ${
 											activeSection === id
 												? "text-[#efadbd] sm:text-black "
-												: "hover:text-black"
+												: "hover:text-[#fbf5ed] sm:hover:text-black"
 										}`}
 									>
 										{label}
-										{/* <span
-											className={`absolute left-0 -bottom-1 h-[2px] bg-[#efadbd] transform transition-transform duration-300 origin-center ${
-												activeSection === id
-												? "scale-x-100 w-full"
-												: "scale-x-0 w-full group-hover:scale-x-100"
-											}`}
-										></span> */}
-
 										<span
 											className={`absolute left-0 -bottom-1 h-[2px] bg-[#efadbd] transition-all duration-300 ${
 												activeSection === id ? "w-full" : "w-0 group-hover:w-full"
