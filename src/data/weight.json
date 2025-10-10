@@ -3,10 +3,12 @@
 	"subtitle": "Convert between grams, kilograms, pounds, ounces, and\u00a0more\u00a0easily.",
 	"referenceValuesTitle": "Common Reference Values",
 	"referenceValues": [
-		"1 kilogram = 1000 grams",
-		"1 pound = 16 ounces",
-		"1 ton = 1000 kilograms",
-		"1 ounce = 28.35 grams"
+		"1 kilogram (kg) = 1000 grams",
+		"1 gram (g) = 1000 milligrams (mg)",
+		"1 ounce (oz) = 28.35 grams",
+		"1 pound (lb) = 16 ounces",
+		"1 pound (lb) = 0.453592 kg",
+		"1 ton = 1000 kilograms"
 	],
 	"examplesTitle": "Example Conversions",
 	"examples": [
