@@ -129,12 +129,12 @@ const ColorConverter = () => {
   };
 
   return (
-    <div className="rounded-2xl bg-[#ddccc2] border border-black mt-2 mb-6 sm:my-7.5 p-6 sm:p-10 md:px-20 md:py-16">
-      <div className="max-w-[620px] mx-auto text-center bg-[#fbf5ed] border rounded-2xl px-6 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
+    <div className="rounded-2xl bg-[#ddccc2] sm:border border-black mt-2 mb-6 sm:my-7.5 p-5.5 sm:p-10 md:px-20 md:py-16">
+      <div className="max-w-[620px] mx-auto text-center bg-[#fbf5ed] sm:border rounded-2xl px-5.5 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
         <h1 className="text-2xl sm:text-3xl font-semibold text-center mb-6">
           {parse(colorData.title)}
         </h1>
-        <p className="text-center mx-auto mb-6 max-w-[440px]">
+        <p className="max-w-[440px] text-center mx-auto mb-8">
           {colorData.subtitle}
         </p>
 
@@ -183,16 +183,19 @@ const ColorConverter = () => {
           Convert
         </button>
 
-        <div className="mt-6">
-          <p className="font-semibold text-lg">Result:</p>
-          <p className="text-base mt-1">{outputValue}</p>
+        {/* Result */}
+        <div className="text-center mt-6">
+          <span className="block bg-[#fbf5ed] rounded-lg text-lg sm:text-xl font-bold overflow-x-auto py-3">
+            Result:{" "}
+            {outputValue}
+          </span>
         </div>
       </div>
 
       {/* Examples, Usage, Fun Facts */}
-      <section className="text-left max-w-[620px] mx-auto">
+      <section className="text-left">
         <div className="mb-10">
-          <h2 className="text-xl font-semibold mb-6">
+          <h2 className="text-xl font-semibold mb-5.5">
             {colorData.examplesTitle}
           </h2>
           <ul>
@@ -208,23 +211,23 @@ const ColorConverter = () => {
         </div>
 
         <div className="mb-10">
-          <h2 className="text-xl font-semibold mb-6">{colorData.usageTitle}</h2>
+          <h2 className="text-xl font-semibold mb-5.5">{colorData.usageTitle}</h2>
           <ul>
             {colorData.usage.map((u, i) => (
-              <li key={i} className="mb-1.5">
+              <li key={i} className="mb-4">
                 <b>{u.title}</b> {u.description}
               </li>
             ))}
           </ul>
         </div>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-6">
+        <div className="mb-6 sm:mb-0">
+          <h2 className="text-xl font-semibold mb-5.5">
             {colorData.funFactsTitle}
           </h2>
           <ul>
             {colorData.funFacts.map((fact, i) => (
-              <li key={i} className="mb-1.5">
+              <li key={i} className="mb-4">
                 <b>{fact.title}:</b> {fact.description}
               </li>
             ))}

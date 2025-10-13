@@ -68,22 +68,22 @@ const TailwindPxConverter = () => {
   const [activeTab, setActiveTab] = useState("Spacing");
 
   return (
-    <div className="rounded-2xl bg-[#ddccc2] border border-black mt-2 mb-6 sm:my-7.5 p-6 sm:p-10 md:px-20 md:py-16">
-      <div className="max-w-[720px] mx-auto text-center bg-[#fbf5ed] border rounded-2xl px-6 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
+    <div className="rounded-2xl bg-[#ddccc2] sm:border border-black mt-2 mb-6 sm:my-7.5 p-5.5 sm:p-10 md:px-20 md:py-16">
+      <div className="max-w-[720px] mx-auto text-center bg-[#fbf5ed] sm:border rounded-2xl px-5.5 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
         <h1 className="text-2xl sm:text-3xl font-semibold mb-6">
           {tailwindData.title}
         </h1>
-        <p className="text-center mx-auto mb-8 max-w-[500px]">
+        <p className="max-w-[500px] text-center mx-auto mb-8">
           {tailwindData.subtitle}
         </p>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-8 space-x-4">
+        <div className="flex justify-center mb-8 space-x-2 sm:space-x-4">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 rounded-lg border transition ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 leading-[1.4] rounded-lg border transition ${
                 activeTab === tab
                   ? "bg-gray-200 border-black font-semibold"
                   : "bg-white hover:bg-gray-100 border-gray-400"
@@ -124,27 +124,27 @@ const TailwindPxConverter = () => {
               {activeTab === "Spacing" &&
                 Object.entries(tailwindSpacing).map(([unit, px]) => (
                   <tr key={unit} className="hover:bg-gray-100 transition">
-                    <td className="px-4 py-2 border-b border-gray-100 font-mono">
+                    <td className="px-4 py-3 border-b border-gray-100 font-mono">
                       p-{unit}
                     </td>
-                    <td className="px-4 py-2 border-b border-gray-100">
+                    <td className="px-4 py-3 border-b border-gray-100">
                       {(Number(unit) * 0.25).toFixed(2)}rem
                     </td>
-                    <td className="px-4 py-2 border-b border-gray-100">{px}px</td>
+                    <td className="px-4 py-3 border-b border-gray-100">{px}px</td>
                   </tr>
                 ))}
               {activeTab === "Font Sizes" &&
                 Object.entries(tailwindFontSizes).map(([cls, px]) => (
                   <tr key={cls} className="hover:bg-gray-100 transition">
-                    <td className="px-4 py-2 border-b border-gray-100 font-mono">{cls}</td>
-                    <td className="px-4 py-2 border-b border-gray-100">{px}px</td>
+                    <td className="px-4 py-3 border-b border-gray-100 font-mono">{cls}</td>
+                    <td className="px-4 py-3 border-b border-gray-100">{px}px</td>
                   </tr>
                 ))}
               {activeTab === "Breakpoints" &&
                 Object.entries(tailwindBreakpoints).map(([bp, px]) => (
                   <tr key={bp} className="hover:bg-gray-100 transition">
-                    <td className="px-4 py-2 border-b border-gray-100 font-mono">{bp}</td>
-                    <td className="px-4 py-2 border-b border-gray-100">{px}</td>
+                    <td className="px-4 py-3 border-b border-gray-100 font-mono">{bp}</td>
+                    <td className="px-4 py-3 border-b border-gray-100">{px}</td>
                   </tr>
                 ))}
             </tbody>
@@ -153,29 +153,33 @@ const TailwindPxConverter = () => {
       </div>
 
       {/* Info Sections */}
-      <section className="max-w-[720px] mx-auto text-left">
-        <h2 className="text-xl font-semibold mb-6">
-          {tailwindData.referenceValuesTitle}
-        </h2>
-        <p className="mb-4">{tailwindData.referenceValuesDescription}</p>
-        <ul className="list-disc list-inside space-y-2">
-          {tailwindData.referenceValues.map((item, i) => (
-            <li key={i}>
-              <b>{item.title}:</b> {item.description}
-            </li>
-          ))}
-        </ul>
+      <section className="text-left">
+        <div className="mb-10">
+          <h2 className="text-xl font-semibold mb-5.5">
+            {tailwindData.referenceValuesTitle}
+          </h2>
+          <p className="mb-4">{tailwindData.referenceValuesDescription}</p>
+          <ul>
+            {tailwindData.referenceValues.map((item, i) => (
+              <li key={i} className="mb-4">
+                <b>{item.title}:</b> {item.description}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <h2 className="text-xl font-semibold mt-10 mb-6">
-          {tailwindData.funFactsTitle}
-        </h2>
-        <ul className="list-disc list-inside space-y-2">
-          {tailwindData.funFacts.map((fact, i) => (
-            <li key={i}>
-              <b>{fact.title}:</b> {fact.description}
-            </li>
-          ))}
-        </ul>
+        <div className="mb-6 sm:mb-0">
+          <h2 className="text-xl font-semibold mb-5.5">
+            {tailwindData.funFactsTitle}
+          </h2>
+          <ul>
+            {tailwindData.funFacts.map((fact, i) => (
+              <li key={i} className="mb-4">
+                <b>{fact.title}:</b> {fact.description}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </div>
   );

@@ -65,7 +65,7 @@ const WeightConverter = () => {
           </ul>
         </div>
 
-        <div>
+        <div className="mb-6 sm:mb-0">
           <h2 className="text-xl font-semibold mb-5.5">
             {weightData.funFactsTitle}
             </h2>
