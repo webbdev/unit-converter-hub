@@ -1,0 +1,15 @@
+{
+	"title": "PDF → Text Converter",
+	"subtitle": "Upload a PDF file to extract, edit, and download readable text — perfect for notes, studying, or quick content reuse.",
+	"funFactsTitle": "Did You Know?",
+	"funFacts": [
+		{ 
+			"title": "PDF Origins", 
+			"description": "The PDF format was created by Adobe in 1993 to ensure documents look the same everywhere." 
+		},
+		{ 
+			"title": "PDF is everywhere", 
+			"description": "Over 2.5 trillion PDFs are estimated to exist globally today." 
+		}
+	]
+}

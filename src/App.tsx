@@ -16,6 +16,7 @@ import PxRemEmConverter from "./pages/PxRemEmConverter";
 import TailwindPxConverter from "./pages/TailwindPxConverter";
 import ViewportConverter from "./pages/ViewportConverter";
 import ColorConverter from "./pages/ColorConverter";
+import PdfConverter from "./pages/PdfConverter";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/tailwind-px" element={<TailwindPxConverter />} />
                 <Route path="/viewport" element={<ViewportConverter />} />
                 <Route path="/color" element={<ColorConverter />} />
+                <Route path="/pdf-converter" element={<PdfConverter />} />
               </Routes>
             </Container>
           </main>
