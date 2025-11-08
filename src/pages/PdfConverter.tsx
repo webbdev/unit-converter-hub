@@ -2,12 +2,21 @@ import { useState, useRef } from "react";
 import * as pdfjsLib from "pdfjs-dist";
 import "pdfjs-dist/build/pdf.worker.mjs";
 import pdfData from "../data/pdf.json";
-import { Bold, Italic, AlignLeft, AlignCenter, AlignRight, AlignJustify } from "lucide-react";
+import {
+	Bold,
+	Italic,
+	AlignLeft,
+	AlignCenter,
+	AlignRight,
+	AlignJustify,
+	Copy,
+} from "lucide-react";
 
 const PdfConverter = () => {
 	const [fileName, setFileName] = useState<string | null>(null);
 	const [text, setText] = useState<string>("");
 	const [isLoading, setIsLoading] = useState(false);
+	const [copied, setCopied] = useState(false);
 	const editorRef = useRef<HTMLDivElement>(null);
 
 	const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,13 +47,24 @@ const PdfConverter = () => {
 		document.execCommand(command, false, undefined);
 	};
 
-	const handleDownload = () => {
+	const handleDownloadTxt = () => {
 		const textContent = editorRef.current?.innerText || text;
 		const blob = new Blob([textContent], { type: "text/plain" });
 		const link = document.createElement("a");
 		link.href = URL.createObjectURL(blob);
 		link.download = fileName?.replace(/\.pdf$/i, ".txt") || "converted.txt";
 		link.click();
+	};
+
+	const handleCopyText = async () => {
+		const textContent = editorRef.current?.innerText || text;
+		try {
+			await navigator.clipboard.writeText(textContent);
+			setCopied(true);
+			setTimeout(() => setCopied(false), 1500);
+		} catch {
+			alert("Failed to copy text.");
+		}
 	};
 
 	return (
@@ -54,9 +74,7 @@ const PdfConverter = () => {
 					className="text-2xl sm:text-3xl font-semibold mb-6"
 					dangerouslySetInnerHTML={{ __html: pdfData.title }}
 				/>
-				<p className="max-w-[480px] text-center mx-auto mb-8">
-					{pdfData.subtitle}
-				</p>
+				<p className="max-w-[480px] text-center mx-auto mb-8">{pdfData.subtitle}</p>
 
 				{/* Upload */}
 				<label className="block mb-4">
@@ -67,22 +85,31 @@ const PdfConverter = () => {
 						className="hidden"
 						id="pdf-upload"
 					/>
-					<span 
-						className="cursor-pointer rounded-3xl px-8 py-3 border bg-transparent hover:bg-gray-100 transition"
-					>
+					<span className="cursor-pointer rounded-3xl px-8 py-3 border bg-transparent hover:bg-gray-100 transition">
 						Upload PDF
 					</span>
 				</label>
 
 				{/* Loading */}
-				{isLoading && <p>Extracting text… please wait.</p>}
+				{isLoading && (
+					<div className="flex flex-col items-center justify-center mt-8 mb-4 space-y-3 animate-fadeIn">
+						<div className="w-8 h-8 border-4 border-t-gray-700 border-gray-300 rounded-full animate-spin"></div>
+						<p className="text-lg font-medium text-gray-800 flex items-center">
+							Extracting text
+							<span className="inline-flex ml-1">
+								<span className="animate-bounce [animation-delay:-0.3s]">.</span>
+								<span className="animate-bounce [animation-delay:-0.15s]">.</span>
+								<span className="animate-bounce">.</span>
+							</span>
+						</p>
+					</div>
+				)}
 
-				{/* Editable Text Area */}
+				{/* Output */}
 				{!isLoading && text && (
 					<>
-						{/* Editor container */}
 						<div className="relative bg-white border rounded-lg min-h-[300px] max-h-[60vh] overflow-y-auto text-left whitespace-pre-wrap leading-relaxed mt-8">
-							{/* Sticky Toolbar inside the scrollable editor */}
+							{/* Toolbar */}
 							<div className="sticky top-0 z-10 flex flex-wrap justify-center gap-2 sm:gap-3 bg-gray-100 border-b px-3 py-2 shadow-sm">
 								<button
 									onClick={() => execCommand("bold")}
@@ -128,38 +155,47 @@ const PdfConverter = () => {
 								</button>
 							</div>
 
-							{/* Editable Content */}
+							{/* Editable content */}
 							<div
 								ref={editorRef}
 								contentEditable
 								suppressContentEditableWarning
 								className="p-4 outline-none"
-								dangerouslySetInnerHTML={{ __html: text.replace(/\n/g, "<br/>") }}
-							></div>
+								dangerouslySetInnerHTML={{
+									__html: text.replace(/\n/g, "<br/>"),
+								}}
+							/>
 						</div>
 
-						{/* Download */}
-						<div className="mt-7">
+						{/* Buttons */}
+						<div className="mt-7 flex justify-center gap-3">
 							<button
-								onClick={handleDownload}
+								onClick={handleDownloadTxt}
 								className="rounded-3xl px-8 py-3 border bg-transparent hover:bg-gray-100 transition"
 							>
 								Download as TXT
+							</button>
+							<button
+								onClick={handleCopyText}
+								className={`rounded-3xl px-8 py-3 border flex items-center gap-2 transition ${
+									copied ? "bg-gray-200" : "hover:bg-gray-100"
+								}`}
+							>
+								<Copy size={16} />
+								{copied ? "Copied!" : "Copy"}
 							</button>
 						</div>
 					</>
 				)}
 			</div>
 
-			{/* Info Sections */}
+			{/* Info Section */}
 			<section className="text-left">
 				<div className="mb-6 sm:mb-0">
-					<h2 className="text-xl font-semibold mb-5.5">
-						{pdfData.funFactsTitle}
-					</h2>
+					<h2 className="text-xl font-semibold mb-5.5">{pdfData.funFactsTitle}</h2>
 					<ul>
 						{pdfData.funFacts.map((fact, i) => (
-							<li key={i} className="mb-2">
+							<li key={i} className="mb-4">
 								<b>{fact.title}:</b> {fact.description}
 							</li>
 						))}

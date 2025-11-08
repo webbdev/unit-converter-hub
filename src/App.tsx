@@ -17,6 +17,8 @@ import TailwindPxConverter from "./pages/TailwindPxConverter";
 import ViewportConverter from "./pages/ViewportConverter";
 import ColorConverter from "./pages/ColorConverter";
 import PdfConverter from "./pages/PdfConverter";
+import TxtConverter from "./pages/TxtConverter";
+import ImgToTextConverter from "./pages/ImgToTextConverter";
 
 function App() {
 
@@ -41,6 +43,8 @@ function App() {
                 <Route path="/viewport" element={<ViewportConverter />} />
                 <Route path="/color" element={<ColorConverter />} />
                 <Route path="/pdf-converter" element={<PdfConverter />} />
+                <Route path="/txt-converter" element={<TxtConverter />} />
+                <Route path="/img-converter" element={<ImgToTextConverter />} />
               </Routes>
             </Container>
           </main>

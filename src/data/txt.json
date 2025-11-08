@@ -1,0 +1,15 @@
+{
+	"title": "Text → PDF Converter (.pdf)",
+	"subtitle": "Upload a .txt file, edit it, and download a clean PDF copy — perfect for sharing or archiving documents.",
+	"funFactsTitle": "Did You Know?",
+	"funFacts": [
+		{
+			"title": "The First PDF",
+			"description": "The very first PDF file was created in 1991 by Adobe co-founder John Warnock."
+		},
+		{
+			"title": "Portable Format",
+			"description": "‘PDF’ stands for ‘Portable Document Format’ — designed to look the same on every device."
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"title": "Image → Text Converter (OCR)",
+	"subtitle": "Upload an image (.png, .jpg) to automatically extract text using AI-based OCR. Edit and export the result as a text file.",
+	"funFactsTitle": "Did You Know?",
+	"funFacts": [
+		{
+			"title": "OCR Origins",
+			"description": "Optical Character Recognition (OCR) was first developed in the early 20th century to help visually impaired people read printed text."
+		},
+		{
+			"title": "Modern AI OCR",
+			"description": "Today’s OCR engines, like Tesseract, use neural networks to recognize handwriting, symbols, and multiple languages."
+		}
+	]
+}

@@ -19,7 +19,9 @@ const developerTools = [
 ];
 
 const textTools = [
-	{ id: "tc-1", name: "PDF → Text", path: "/pdf-converter", icon: "📄" }
+	{ id: "tc-1", name: "PDF → Text", path: "/pdf-converter", icon: "📰" },
+	{ id: "tc-2", name: "Text → PDF", path: "/txt-converter", icon: "📄" },
+	{ id: "tc-3", name: "Image → Text", path: "/img-converter", icon: "🖼️" }
 ];
 
 const Home = () => {
@@ -151,7 +153,7 @@ const Home = () => {
 			{/* Text & File Tools */}
 			<section id="text" className="scroll-mt-24 text-center mb-14 sm:mb-17">
 				<h2 className="text-2xl sm:text-3xl mb-8 sm:mb-10">
-					Text & File Tools
+					Text Convert
 				</h2>
 				<div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
 					{textTools.map((tool) => (
