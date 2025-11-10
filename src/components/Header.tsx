@@ -10,7 +10,7 @@ type Section = {
 const sections: Section[] = [
 	{ id: "general", label: "General Units" },
 	{ id: "developer", label: "Developer Units" },
-	{ id: "text", label: "Text Convert" },
+	{ id: "text", label: "Text Converters" },
 ];
 
 const Header: React.FC = () => {
