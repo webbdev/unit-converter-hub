@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import imgData from "../data/img.json";
 
-/** Helper: check if text looks meaningful */
+/** Helper: check if extracted text is meaningful */
 const isMeaningfulText = (input: string, confidence: number): boolean => {
   if (!input) return false;
 
@@ -22,7 +22,10 @@ const isMeaningfulText = (input: string, confidence: number): boolean => {
   const realWords = words.filter((w) => w.length > 2);
   const ratio = realWords.length / words.length;
 
-  return ratio > 0.5 && realWords.length >= 3 && confidence >= 40;
+  // For real-world photos, sometimes OCR confidence is low — use softer threshold
+  const minConfidence = cleaned.length > 15 ? 30 : 40;
+
+  return ratio > 0.5 && realWords.length >= 3 && confidence >= minConfidence;
 };
 
 const ImgToTextConverter = () => {
@@ -34,6 +37,7 @@ const ImgToTextConverter = () => {
   const [copied, setCopied] = useState(false);
   const editorRef = useRef<HTMLDivElement>(null);
 
+  /** File Upload & OCR */
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -50,12 +54,15 @@ const ImgToTextConverter = () => {
 
       try {
         const result = await Tesseract.recognize(src, "eng", {
+          tessedit_char_whitelist:
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!?;:-()[]{}\"' ",
           logger: (m) => console.log(m),
         });
 
         const conf = result.data.confidence || 0;
         let extracted = result.data.text
           .replace(/[^\x20-\x7E\n]/g, "")
+          .replace(/\s{2,}/g, " ")
           .trim();
 
         if (!isMeaningfulText(extracted, conf)) {
@@ -75,13 +82,11 @@ const ImgToTextConverter = () => {
     reader.readAsDataURL(file);
   };
 
-  const execCommand = (command: string) => {
-    document.execCommand(command, false, undefined);
-  };
+  const execCommand = (cmd: string) => document.execCommand(cmd, false, undefined);
 
+  /** Download extracted text */
   const handleDownloadTxt = () => {
-    const textContent =
-      editorRef.current?.innerText || text || "No text detected.";
+    const textContent = editorRef.current?.innerText || text || "No text detected.";
     const blob = new Blob([textContent], { type: "text/plain" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
@@ -90,9 +95,9 @@ const ImgToTextConverter = () => {
     link.click();
   };
 
+  /** Copy extracted text */
   const handleCopyText = async () => {
-    const textContent =
-      editorRef.current?.innerText || text || "No text detected.";
+    const textContent = editorRef.current?.innerText || text || "No text detected.";
     try {
       await navigator.clipboard.writeText(textContent);
       setCopied(true);
