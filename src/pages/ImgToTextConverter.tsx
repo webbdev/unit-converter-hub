@@ -54,9 +54,8 @@ const ImgToTextConverter = () => {
 
       try {
         const result = await Tesseract.recognize(src, "eng", {
-          tessedit_char_whitelist:
-            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!?;:-()[]{}\"' ",
           logger: (m) => console.log(m),
+          ...( { tessedit_char_whitelist: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!?;:-()[]{}\"' " } as any )
         });
 
         const conf = result.data.confidence || 0;

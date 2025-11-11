@@ -1,5 +1,5 @@
 {
-  "title": "Viewport Unit Converter (px ⇄ vw ⇄ vh)",
+  "title": "Viewport Unit Converter (px\u00a0⇄\u00a0vw\u00a0⇄\u00a0vh)",
   "subtitle": "Easily convert between pixels (px), viewport width (vw), and viewport height (vh). You can also enter your own screen width and height — or auto-detect your current browser\u00a0viewport.",
   "examplesTitle": "Conversion Examples",
   "examplesDescription": "Here are some examples of viewport conversions based on a 1920×1080 screen:",

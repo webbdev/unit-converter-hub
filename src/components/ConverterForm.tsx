@@ -40,7 +40,7 @@ const ConverterForm = ({ units, defaultFrom, defaultTo, onConvert }: ConverterFo
 					<select
 						value={fromUnit}
 						onChange={(e) => setFromUnit(e.target.value)}
-						className="p-3 w-full rounded-lg border border-black"
+						className="px-3 py-3.5 w-full rounded-lg border border-black"
 					>
 						{units.map((unit) => (
 							<option key={unit} value={unit}>
@@ -54,7 +54,7 @@ const ConverterForm = ({ units, defaultFrom, defaultTo, onConvert }: ConverterFo
 					<select
 						value={toUnit}
 						onChange={(e) => setToUnit(e.target.value)}
-						className="p-3 w-full rounded-lg border border-black"
+						className="px-3 py-3.5 w-full rounded-lg border border-black"
 					>
 						{units.map((unit) => (
 							<option key={unit} value={unit}>
@@ -66,7 +66,7 @@ const ConverterForm = ({ units, defaultFrom, defaultTo, onConvert }: ConverterFo
 			</div>
 
 			{/* Result */}
-			<div className="text-center mt-1.5 sm:mt-4">
+			<div className="text-center mt-1.5 sm:mt-3.5">
 				<span className="block bg-[#fbf5ed] rounded-lg text-lg sm:text-xl font-bold overflow-x-auto py-3">
 					Result:{" "}
 					{value ? formatResult(convert(Number(value))) : "-"} {toUnit}
