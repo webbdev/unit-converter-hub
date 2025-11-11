@@ -62,7 +62,7 @@ const TxtConverter = () => {
 		<div className="rounded-2xl bg-[#ddccc2] sm:border border-black mt-2 mb-6 sm:my-7.5 p-5.5 sm:p-10 md:px-20 md:py-16">
 			<div className="max-w-auto mx-auto text-center bg-[#fbf5ed] sm:border rounded-2xl px-5.5 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
 				<h1 className="text-2xl sm:text-3xl font-semibold mb-6" dangerouslySetInnerHTML={{ __html: converterData.title }} />
-				<p className="max-w-[480px] text-center mx-auto mb-8">{converterData.subtitle}</p>
+				<p className="max-w-[480px] text-center mx-auto mb-9">{converterData.subtitle}</p>
 
 				<label className="block mb-4">
 					<input type="file" accept=".txt" onChange={handleFileUpload} className="hidden" id="text-upload" />
@@ -75,7 +75,7 @@ const TxtConverter = () => {
 
 				{!isLoading && text && (
 				<>
-					<div className="relative bg-white border rounded-lg min-h-[300px] max-h-[60vh] overflow-y-auto text-left whitespace-pre-wrap leading-relaxed mt-8">
+					<div className="relative bg-white border rounded-lg min-h-[300px] max-h-[60vh] overflow-y-auto text-left whitespace-pre-wrap leading-relaxed mt-9">
 						<div className="sticky top-0 z-10 flex flex-wrap justify-center gap-2 sm:gap-3 bg-gray-100 border-b px-3 py-2 shadow-sm">
 							<button onClick={() => execCommand("bold")} className="p-2 border rounded hover:bg-gray-200" title="Bold">
 								<Bold size={17} />

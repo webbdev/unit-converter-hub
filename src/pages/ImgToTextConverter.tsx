@@ -113,7 +113,7 @@ const ImgToTextConverter = () => {
           className="text-2xl sm:text-3xl font-semibold mb-6"
           dangerouslySetInnerHTML={{ __html: imgData.title }}
         />
-        <p className="max-w-[460px] text-center mx-auto mb-8">
+        <p className="max-w-[460px] text-center mx-auto mb-9">
           {imgData.subtitle}
         </p>
 
@@ -132,7 +132,7 @@ const ImgToTextConverter = () => {
 
         {/* Preview */}
         {imageSrc && (
-          <div className="flex justify-center mt-8.5 mb-6">
+          <div className="flex justify-center mt-9 mb-6">
             <img
               src={imageSrc}
               alt="Uploaded"
