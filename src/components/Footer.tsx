@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 								to="/"
 								className="text-2xl underline underline-offset-4 decoration-[#efadbd]"
 							>
-								Convertly
+								ConvertyHub
 							</Link>
 						</div>
 
@@ -65,9 +65,9 @@ const Footer: React.FC = () => {
 					{/* Copyright */}
 					<div className="border-t border-t-white py-6 text-left sm:text-center">
 						<p className="text-sm text-[#fbf5ed] tracking-[0.8px] sm:tracking-[1px]">
-							© {new Date().getFullYear()} by Convertly. Built by
+							© {new Date().getFullYear()} by ConvertyHub. Built by
 							<a
-								href=""
+								href="/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="ml-1 text-brand underline underline-offset-2"
