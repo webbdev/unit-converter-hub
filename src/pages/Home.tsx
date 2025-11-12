@@ -41,11 +41,11 @@ const toolsData = [
 ];
 
 const Home = () => {
-	const [visibleCount, setVisibleCount] = useState(window.innerWidth < 640 ? 2 : 3);
+	const [visibleCount, setVisibleCount] = useState(window.innerWidth < 640 ? 4 : 3);
 	const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
 	useEffect(() => {
-		const handleResize = () => setVisibleCount(window.innerWidth < 640 ? 2 : 3);
+		const handleResize = () => setVisibleCount(window.innerWidth < 640 ? 4 : 3);
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
@@ -65,10 +65,10 @@ const Home = () => {
 	};
 
 	return (
-		<div className="mt-0 sm:mt-6 mb-14 sm:mb-20">
+		<div className="mt-0 mb-14 sm:mb-20">
 			{/* Hero Section */}
-			<div className="rounded-2xl text-center py-6 sm:p-10 mb-4 sm:mb-12">
-				<h1 className="text-[30px] sm:text-[58px] md:text-[68px] leading-[1.15] mb-5">
+			<div className="text-center mx-auto mt-6 sm:mt-16 lg:mt-18 xl:mt-20 mb-10 sm:mb-20 lg:mb-22 xl:mb-24">
+				<h1 className="text-[30px] sm:text-[56px] md:text-[62px] lg:text-[68px] leading-[1.15] mb-4 sm:mb-5">
 					Convert Units Instantly
 				</h1>
 				<p className="max-w-[300px] sm:max-w-xl mx-auto text-[16px] sm:text-[18px]">
@@ -92,7 +92,7 @@ const Home = () => {
 						id={section.id}
 						className="scroll-mt-24 text-center mb-14 sm:mb-17"
 					>
-						<h2 className="text-2xl sm:text-3xl mb-8 sm:mb-10">
+						<h2 className="text-2xl sm:text-3xl mb-6 sm:mb-10">
 							{section.title}
 						</h2>
 
