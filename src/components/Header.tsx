@@ -112,9 +112,9 @@ const Header: React.FC = () => {
 					<a
 						href="/"
 						onClick={handleHomeClick}
-						className="text-2xl sm:text-2xl underline underline-offset-4 decoration-[#efadbd]"
+						className="text-xl underline underline-offset-4 decoration-[#efadbd]"
 					>
-						ConvertyHub
+						Convert<span className="text-[#efadbd]">y</span>Hub
 					</a>
 
 					<nav aria-label="Main Navigation">

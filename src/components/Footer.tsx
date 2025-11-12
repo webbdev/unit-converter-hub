@@ -42,9 +42,9 @@ const Footer: React.FC = () => {
 						<div className="text-left">
 							<Link
 								to="/"
-								className="text-2xl underline underline-offset-4 decoration-[#efadbd]"
+								className="text-xl underline underline-offset-4 decoration-[#efadbd]"
 							>
-								ConvertyHub
+								Convert<span className="text-[#efadbd]">y</span>Hub
 							</Link>
 						</div>
 
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
 					{showButton && (
 						<button
 							onClick={scrollToTop}
-							className="absolute right-[20px] sm:right-[20px] xl:right-[-100px] bottom-3.5 sm:bottom-3 bg-[#efadbd] text-black px-4 sm:px-4 xl:px-5 py-2 xl:py-3 rounded-full shadow-lg hover:bg-[#f5c4d1] transition"
+							className="absolute right-[16px] xs:right-[20px] sm:right-[20px] xl:right-[-100px] bottom-3.5 sm:bottom-3 bg-[#efadbd] text-black px-4 sm:px-4 xl:px-5 py-2 xl:py-3 rounded-full shadow-lg hover:bg-[#f5c4d1] transition"
 							aria-label="Back to top"
 						>
 							<span>↑</span><span className="hidden sm:inline sm:ml-1">Top</span>
