@@ -68,10 +68,10 @@ const Home = () => {
 		<div className="mt-0 mb-14 sm:mb-20">
 			{/* Hero Section */}
 			<div className="text-center mx-auto mt-6 sm:mt-16 lg:mt-18 xl:mt-20 mb-10 sm:mb-20 lg:mb-24">
-				<h1 className="text-[36px] xs:text-[40px] sm:text-[66px] md:text-[72px] lg:text-[80px] leading-[1.15] mb-4 sm:mb-5">
+				<h1 className="text-[36px] xs:text-[40px] sm:text-[66px] md:text-[72px] lg:text-[78px] leading-[1.15] mb-4 sm:mb-5">
 					Convert Instantly
 				</h1>
-				<p className="max-w-[300px] sm:max-w-[380px] md:max-w-xl mx-auto text-[16px] sm:text-[18px]">
+				<p className="max-w-[300px] sm:max-w-[380px] md:max-w-xl mx-auto text-[16px] sm:text-[17px] lg:text-[18px]">
 					From units to text — fast, accurate conversions in one simple tool.
 				</p>
 			</div>
