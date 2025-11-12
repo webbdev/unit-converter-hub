@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://unit-converter-hub.netlify.app/</loc>
+    <lastmod>2025-11-11</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -17,7 +18,45 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://unit-converter-hub.netlify.app/data-storage</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/speed</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/time</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://unit-converter-hub.netlify.app/px-rem-em</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/tailwind-px</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/color</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/viewport</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/pdf-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/txt-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://unit-converter-hub.netlify.app/img-converter</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
