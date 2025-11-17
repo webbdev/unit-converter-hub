@@ -68,11 +68,11 @@ const Home = () => {
 		<div className="mt-0 mb-14 sm:mb-20">
 			{/* Hero Section */}
 			<div className="text-center mx-auto mt-6 sm:mt-16 lg:mt-18 xl:mt-20 mb-10 sm:mb-20 lg:mb-24">
-				<h1 className="text-[36px] xs:text-[40px] sm:text-[66px] md:text-[72px] lg:text-[78px] leading-[1.15] mb-4 sm:mb-5">
+				<h1 className="text-[36px] xs:text-[40px] sm:text-[64px] md:text-[72px] lg:text-[77px] leading-[1.15] mb-4 sm:mb-5 animate-fade-up">
 					Convert Instantly
 				</h1>
-				<p className="max-w-[300px] sm:max-w-[380px] md:max-w-xl mx-auto text-[16px] sm:text-[17px] lg:text-[18px]">
-					From units to text — fast, accurate conversions in one simple tool.
+				<p className="max-w-[300px] sm:max-w-[370px] md:max-w-xl mx-auto text-[16px] sm:text-[17px] lg:text-[18px] animate-fade">
+					From units to text — fast, accurate conversions in one place.
 				</p>
 			</div>
 
@@ -114,7 +114,11 @@ const Home = () => {
 											to={tool.path}
 											className="group block px-1 py-5 sm:py-8 rounded-2xl border bg-[#ddccc2] hover:bg-transparent shadow hover:shadow transition"
 										>
-											<div className="text-3xl sm:text-4xl mb-3 sm:mb-4">
+											<div
+												className={`text-3xl sm:text-4xl mb-3 sm:mb-4 ${
+													tool.icon === "🌀" ? "animate-spin-slow" : ""
+												}`}
+											>
 												{tool.icon}
 											</div>
 											<h3 className="text-base sm:text-lg sm:tracking-[0.8px]">

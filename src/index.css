@@ -2,6 +2,8 @@
 
 @theme {
   --breakpoint-xs: 475px;
+  --animate-spin-slow: spin 3s linear infinite;
+  --animate-spin-fast: spin 0.5s linear infinite;
 }
 
 html {

@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
 
 					{/* Copyright */}
 					<div className="border-t border-t-white py-6 text-left sm:text-center">
-						<p className="text-sm text-[#fbf5ed] tracking-[0.8px] sm:tracking-[1px]">
+						<p className="text-sm text-[#fbf5ed] tracking-[0.6px] sm:tracking-[1px]">
 							© {new Date().getFullYear()} by ConvertyHub. Built by
 							<a
 								href="/"
