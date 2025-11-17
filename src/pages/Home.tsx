@@ -68,10 +68,36 @@ const Home = () => {
 		<div className="mt-0 mb-14 sm:mb-20">
 			{/* Hero Section */}
 			<div className="text-center mx-auto mt-6 sm:mt-16 lg:mt-18 xl:mt-20 mb-10 sm:mb-20 lg:mb-24">
-				<h1 className="text-[36px] xs:text-[40px] sm:text-[64px] md:text-[72px] lg:text-[77px] leading-[1.15] mb-4 sm:mb-5 animate-fade-up">
+				<div>
+					{/* <span className="animate-spark inline-block text-[50px]">⚡</span> */}
+				</div>
+
+				<div className="relative mx-auto mt-0 w-20 hidden xl:block">
+					<div className="relative animate-lightning-glow">
+						<svg
+						viewBox="0 0 100 200"
+						fill="none"
+						stroke="#efadbd"
+						strokeWidth="6"
+						className="
+							[stroke-linecap:round]
+							[stroke-linejoin:round]
+							animate-lightning-draw-loop
+						"
+						style={{
+							strokeDasharray: 150,
+							strokeDashoffset: 150,
+						}}
+						>
+						<path d="M55 10 L40 60 L60 60 L45 110 L65 75 L50 75 Z" />
+						</svg>
+					</div>
+				</div>
+
+				<h1 className="text-[36px] xs:text-[40px] sm:text-[64px] md:text-[72px] lg:text-[77px] leading-[1.15] mb-4 sm:mb-5">
 					Convert Instantly
 				</h1>
-				<p className="max-w-[300px] sm:max-w-[370px] md:max-w-xl mx-auto text-[16px] sm:text-[17px] lg:text-[18px] animate-fade">
+				<p className="max-w-[300px] sm:max-w-[370px] md:max-w-xl mx-auto text-[16px] sm:text-[17px] lg:text-[18px]">
 					From units to text — fast, accurate conversions in one place.
 				</p>
 			</div>
@@ -115,9 +141,11 @@ const Home = () => {
 											className="group block px-1 py-5 sm:py-8 rounded-2xl border bg-[#ddccc2] hover:bg-transparent shadow hover:shadow transition"
 										>
 											<div
-												className={`text-3xl sm:text-4xl mb-3 sm:mb-4 ${
-													tool.icon === "🌀" ? "animate-spin-slow" : ""
-												}`}
+												className={`text-3xl sm:text-4xl mb-3 sm:mb-4 
+													${tool.icon === "🌀" ? "animate-spin-slow" : ""}
+													${tool.icon === "⚖️" ? "animate-wiggle" : ""}
+													${tool.icon === "⚡" ? "animate-spark" : ""}
+											`}
 											>
 												{tool.icon}
 											</div>

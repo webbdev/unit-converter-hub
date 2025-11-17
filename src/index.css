@@ -4,6 +4,68 @@
   --breakpoint-xs: 475px;
   --animate-spin-slow: spin 3s linear infinite;
   --animate-spin-fast: spin 0.5s linear infinite;
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50%      { transform: rotate(5deg); }
+  }
+
+  --animate-wiggle: wiggle 2s ease-in-out infinite;
+
+  @keyframes spark {
+    0%, 100% {
+      filter: drop-shadow(0 0 0px #facc15); /* yellow-400 */
+      transform: scale(1);
+    }
+    20% {
+      filter: drop-shadow(0 0 6px #facc15);
+      transform: scale(1.05);
+    }
+    40% {
+      filter: drop-shadow(0 0 10px #facc15);
+      transform: scale(1.12);
+    }
+    60% {
+      filter: drop-shadow(0 0 4px #facc15);
+      transform: scale(1.03);
+    }
+    80% {
+      filter: drop-shadow(0 0 12px #facc15);
+      transform: scale(1.15);
+    }
+  }
+
+  --animate-spark: spark 2s ease-in-out infinite;
+
+
+  /* Draw animation (one time) */
+  @keyframes lightning-draw {
+    0% { stroke-dashoffset: 150; }
+    100% { stroke-dashoffset: 0; }
+  }
+  --animate-lightning-draw: lightning-draw 1.8s ease-out infinite;
+
+  @keyframes lightning-draw-loop {
+  0% {
+    stroke-dashoffset: 150;
+    opacity: 1;
+  }
+  12% { stroke-dashoffset: 0; }   /* slower reveal */
+  88% { stroke-dashoffset: 0; }   /* hold */
+  100% { stroke-dashoffset: 150; }
+}
+
+  --animate-lightning-draw-loop: lightning-draw-loop 5.8s linear infinite;
+
+  @keyframes lightning-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 4px #efadbd);
+    }
+    50% {
+      filter: drop-shadow(0 0 12px #efadbd);
+    }
+  }
+  --animate-lightning-glow: lightning-glow 1.6s ease-in-out infinite;
 }
 
 html {
