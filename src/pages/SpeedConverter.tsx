@@ -18,7 +18,7 @@ const convertSpeed = (value: number, from: string, to: string) => {
 const SpeedConverter = () => {
   return (
     <div className="rounded-2xl bg-[#ddccc2] sm:border border-black mt-2 mb-6 sm:my-7.5 p-5.5 sm:p-10 md:px-20 md:py-16">
-      <div className="max-w-[620px] mx-auto text-center bg-[#fbf5ed] sm:border rounded-2xl px-5.5 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
+      <div className="max-w-[660px] mx-auto text-center bg-[#fbf5ed] sm:border rounded-2xl px-5.5 sm:px-14 py-8 sm:py-10 mb-10 md:mb-14">
         <h1 className="text-2xl sm:text-3xl font-semibold mb-6">{speedData.title}</h1>
         <p className="text-center mx-auto max-w-[440px] mb-8">
           {speedData.subtitle}
