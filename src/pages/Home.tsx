@@ -74,7 +74,7 @@ const Home = () => {
 					<span>Convert</span>
 
 					{/* Lightning Icon */}
-					<span className="relative w-18 mt-0 hidden xl:block">
+					<span className="relative w-17 mt-0 hidden xl:block">
 						<span className="absolute top-[-34px] inset-0 animate-lightning-glow">
 							<svg
 								viewBox="0 0 100 200"

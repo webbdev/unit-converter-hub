@@ -55,7 +55,7 @@
   100% { stroke-dashoffset: 150; }
 }
 
-  --animate-lightning-draw-loop: lightning-draw-loop 5.8s linear infinite;
+  --animate-lightning-draw-loop: lightning-draw-loop 6s linear infinite;
 
   @keyframes lightning-glow {
     0%, 100% {
